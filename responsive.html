@@ -39,81 +39,70 @@ Description : Responsive Layouts.
 	</style> -->
 
     <style>
-		body { margin: 0; padding: 0;}
-		img { max-width: 100%; height: auto; }
-        .container { width: 100%;}
-        .header, .footer { background-color: #f2f2f2; text-align: center; padding: 10px; }        
-        .main { padding: 15px; margin-left: 150px;}		
-        .footer { position: fixed; bottom: 0; width: 100%;}
-        .news-item { padding: 10px; }
-		
-		.row { 
-			display: block;
-		}
+        body, div, header, footer, article, img {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-		.large, .medium, .small {
-			box-sizing: border-box;
-		}
-		
-		.gap {
-			margin-top: 500px;
-		}
+        img {
+            max-width: 100%;
+            height: auto;
+        }
 
-		@media screen and (min-width: 769px) {	
-			.large { 
-				width: 100%;
-			}
-			.medium { 
-				width: 70%;
-				float: left;
+        .container {
+            width: 100%;
+        }
 
-			}
-			.small { 
-				width: 30%;
-				float: left;
+        .header, .footer {
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 10px;
+        }
 
-			 }
-		}
+        .main {
+            padding: 15px;	
 
-        @media screen and (max-width: 768px) {
-			.main {
-				box-sizing: border-box;
-				
-				
-			}
-			.menu{
-				display: inline-block;
-				width: 100%;
-			}
-			
-			.large { 
-				width: 100%;
-			}
-			.medium { 
-				width: 60%;
-				float: left;
-			}
-			.small { 
-				width: 40%;
-				float: left;
-			 }
+        }
 
-		}
+        .footer {
+            position: relative;
+            clear: both;
+            width: 100%;
+        }
+
+        .news-item {
+            padding: 10px;
+        }
+
+        .gap {
+            height: 50px; 
+        }
+
+        .row, .large, .medium, .small {
+            border: none;
+        }
+
+        @media screen and (min-width: 769px) {
+			.main { margin-left: 150px;}	
+            .large { width: 100%; }
+            .medium { width: 70%; float: right; }
+            .small { width: 30%; float: left; }
+        }
+
+        @media screen and (max-width: 768px){
+            .header, .main, .footer, .menu { width: 100%; }
+            .large { width: 100%; }
+            .medium { width: 60%; float: right; }
+            .small { width: 40%; float: left; }
+            .medium { margin-top: 20px; }
+            .small { margin-bottom: 20px; }
+        }
 
         @media screen and (max-width: 480px) {
-			.main {
-				box-sizing: content-box;
-			}
-			.menu{
-				display: inline-block;
-				width: 100%;
-			}
-			.large, .medium, .small { 
-				width: 100%;
-			}
-			h1 {
-				font-size: 18px;
-			}
+            .header, .main, .footer, .menu { width: 100%; }
+            .large, .medium, .small { width: 100%; }
+            h1 { font-size: 18px; }
         }
 
         
